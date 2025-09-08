@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 import type { InvestmentResult } from '../investment-result.model';
 import { CurrencyPipe } from '@angular/common';
 
@@ -11,13 +11,7 @@ import { CurrencyPipe } from '@angular/common';
 })
 export class InvestmentResultsComponent {
   // signals approach -
-  //  results = input<{
-  //   year: number;
-  //   interest: number;
-  //   valueEndOfYear: number;
-  //   annualInvestment: number;
-  //   totalInterest: number;
-  //   totalAmountInvested: number;
-  // }>()
-  @Input() results?: InvestmentResult[];
+  results = input<InvestmentResult[]>();
+
+  // @Input() results?: InvestmentResult[];
 }
